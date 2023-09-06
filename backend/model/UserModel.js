@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 //datos con los qe se registra
 
-const RegisterSchema = new mongoose.Schema ({
+const UserSchema = new mongoose.Schema ({
     Name: {
         type: String,
         required:true,
@@ -18,6 +18,11 @@ const RegisterSchema = new mongoose.Schema ({
         required:true,
         trim:true, //quita los espacios en blanco
     },
+    Role: {
+        type: String,
+        required: true,
+        default: "user" //por defecto le da este rol
+    },
     Email: {
         type: String,
         required:true,
@@ -28,9 +33,10 @@ const RegisterSchema = new mongoose.Schema ({
         type: String,
         required:true
     },
+
 })
 
 //const que interactua con la base de datos
-const Register = mongoose.model('Register', RegisterSchema);
+const User = mongoose.model('User', UserSchema);
 
-export default Register;
+export default User;

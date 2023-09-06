@@ -61,11 +61,17 @@ export const updateForm = async (req, res) => {
 }
 
 //borrar
-export const deleteform = async (req, res) =>{
+export const deleteForm = async (req, res) =>{
+
+    const {Email, Name, Subject, Message} = req.body
+
+    if(!Email && !Name && !Subject && !Message ) {
+        return res.status(400).json({ message: "Debe proporcionar al menos un campo para actualizar." });
+    }
     try {
         const id = req.params.id
         const form = await FormLock.deleteOne({_id: id});
-         if (!form){
+         if (form.deletedCount === 0) {
             res.status(404).json({ message: "No se encontró el fromulario con el id especificado." });
          }
          res.status(200).json({ message: "¡Formulario se ha eliminado correctamente!" });
