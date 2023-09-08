@@ -3,6 +3,7 @@ import db from "./database/db.js"
 import FormRouter from './routes/FormRoutes.js';
 import cors from 'cors';
 import AuthRoutes from './routes/AuthRoutes.js';
+import { isAdmin } from './middleware/isAdmin.js';
 
 
 const app = express ();
@@ -12,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/form', FormRouter);
 app.use('/login', AuthRoutes);
+
 
 app.listen(8000, () => {
     console.log('Servidor iniciado en el puerto 8000'); //puerto donde escucha la app

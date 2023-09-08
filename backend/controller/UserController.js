@@ -2,6 +2,11 @@ import User from "../model/UserModel.js";
 
 //CRUD
 
+
+/* export const getUsers = async  (req, res) => {
+    if ()
+} */
+ 
 export const create = async (req, res) => {
     const {Name, Lastname, UserName, Email, Password} = req.body
     if (!Name || !Lastname || !UserName || !Email || !Password){
