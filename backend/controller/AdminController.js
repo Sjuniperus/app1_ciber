@@ -1,4 +1,6 @@
 import User from '../model/UserModel.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 export const updateUserByAdmin = async (req, res) => {

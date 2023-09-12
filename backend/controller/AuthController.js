@@ -1,7 +1,8 @@
 import Auth from "../model/AuthModel.js";
 /* import { render } from 'loginPage';*/
 import bcryptjs from 'bcryptjs';
-import JWTSECRET from '.env';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 /*export const showLoginPage = (req, res) => {
@@ -23,8 +24,8 @@ export const login = async (req, res) => {
         if (!passwordMatch) {
             return res.status(401).json({ message: 'Credenciales incorrectas' });
           }
-        
-        const token = jwt.sign({ userId: newUser._id}, JWTSECRET || 'defaultsecret', { expiresIn: '1h' });//defaultsecret es por si no encuentra el .env
+        const jwtsecret = process.env.JWT_SECRET;
+        const token = jwt.sign({ userId: newUser._id}, jwtsecret|| 'defaultsecret', { expiresIn: '1h' });//defaultsecret es por si no encuentra el .env
 
         return res.status(200).json({ message: 'Usuario registrado con éxito.', token });
         

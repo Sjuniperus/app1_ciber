@@ -1,10 +1,11 @@
 import mongoose from 'mongoose';
-import { MONGODB_URI } from '../.env';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const url= MONGODB_URI;
+const mongodburi = process.env.MONGODB_URI;
 
 try {
-    mongoose.connect(url, {
+    mongoose.connect(mongodburi, {
         useNewUrlParser: true,
         useUnifiedTopology:true
     }).then(() =>{

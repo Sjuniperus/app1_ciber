@@ -1,10 +1,13 @@
 import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 import db from "./database/db.js"
 import FormRouter from './routes/FormRoutes.js';
 import cors from 'cors';
 import AuthRoutes from './routes/AuthRoutes.js';
 import UserRoutes from './routes/UserRoutes.js';
 import AdminRoutes from './routes/AdminRoutes.js';
+
 
 const app = express ();
 app.use(express.json());

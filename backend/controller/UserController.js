@@ -1,6 +1,8 @@
 import User from '../model/UserModel.js';
 import bcryptjs from 'bcryptjs';
-import JWTSECRET from '.env';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 export const registerUser = async (req, res) => {
   const { Name, Lastname, UserName, Email, Password } = req.body;
@@ -19,14 +21,15 @@ export const registerUser = async (req, res) => {
       Name,
       Lastname,
       UserName,
-      Email,
+      Email: Email.toLowerCase(),
       Password: hashedPassword,
     });
 
     await newUser.save();
     
     //crear token
-    const token = jwt.sign({ userId: newUser._id}, JWTSECRET || 'defaultsecret', { expiresIn: '1h' });//defaultsecret es por si no encuentra el .env
+    const jwtsecret = process.env.JWT_SECRET;
+    const token = jwt.sign({ userId: newUser._id}, jwtsecret || 'defaultsecret', { expiresIn: '1h' });//defaultsecret es por si no encuentra el .env
 
     return res.status(201).json({ message: 'Usuario registrado con éxito.', token });
   } catch (error) {

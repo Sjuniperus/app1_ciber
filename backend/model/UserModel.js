@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import mongooseUniqueValidator from "mongoose-unique-validator";
 //datos con los qe se registra
 
 const UserSchema = new mongoose.Schema ({
@@ -28,7 +28,7 @@ const UserSchema = new mongoose.Schema ({
         type: String,
         required:true,
         trim:true,
-        inuque:true
+        unique:true
     },
     Password: {
         type: String,
