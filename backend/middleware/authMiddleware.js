@@ -13,6 +13,7 @@ export const authenticate = (req, res, next) => {
 
     // Adjunta info del usuario
     req.user = decoded.user;
+    req.user.isAdmin = decoded.user.isAdmin;
 
     next();
     } catch (error) {

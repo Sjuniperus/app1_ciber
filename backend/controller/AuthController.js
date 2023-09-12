@@ -1,6 +1,8 @@
 import Auth from "../model/AuthModel.js";
 /* import { render } from 'loginPage';*/
-import bcrypt from 'bcrypt';
+import bcryptjs from 'bcryptjs';
+import JWTSECRET from '.env';
+
 
 /*export const showLoginPage = (req, res) => {
   res.render('loginPage');
@@ -17,13 +19,14 @@ export const login = async (req, res) => {
             return res.status(401).json({ message: 'Credenciales incorrectas' });
           }
 
-        const passwordMatch = await bcrypt.compare(Password, user.Password);
+        const passwordMatch = await bcryptjs.compare(Password, user.Password);
         if (!passwordMatch) {
             return res.status(401).json({ message: 'Credenciales incorrectas' });
           }
         
-        const token = jwt.sign({ userId: user._id }, 'clave_secreta', { expiresIn: '1h' });
-        return res.status(200).json({ token });
+        const token = jwt.sign({ userId: newUser._id}, JWTSECRET || 'defaultsecret', { expiresIn: '1h' });//defaultsecret es por si no encuentra el .env
+
+        return res.status(200).json({ message: 'Usuario registrado con éxito.', token });
         
     } catch (error) {
         res.status(500).json({message: error.message})

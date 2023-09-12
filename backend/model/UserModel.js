@@ -21,6 +21,7 @@ const UserSchema = new mongoose.Schema ({
     Role: {
         type: String,
         required: true,
+        enum:['admin', 'user'],
         default: "user" //por defecto le da este rol
     },
     Email: {
@@ -37,6 +38,6 @@ const UserSchema = new mongoose.Schema ({
 })
 
 //const que interactua con la base de datos
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model('User', UserSchema) 
 
 export default User;

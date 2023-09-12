@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
+import { MONGODB_URI } from '../.env';
 
-const url= "mongodb://127.0.0.1:27017/form"
+const url= MONGODB_URI;
 
 try {
     mongoose.connect(url, {
