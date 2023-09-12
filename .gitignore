@@ -1,1 +1,27 @@
-node_modules
+# Archivos generados por Node.js
+node_modules/
+
+# Archivos generados por npm
+npm-debug.log
+yarn-error.log
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración
+.env
+
+# Archivos de respaldo
+*.bak
+*.swp
+*~
+
+# Archivos de registro
+logs/
+log-debug.log
+log-error.log
+log-info.log
+
+# Base de datos local de MongoDB
+data/
