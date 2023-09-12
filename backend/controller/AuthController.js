@@ -1,7 +1,8 @@
 import Auth from "../model/AuthModel.js";
-/* import { render } from 'loginPage';
+/* import { render } from 'loginPage';*/
+import bcrypt from 'bcrypt';
 
-export const showLoginPage = (req, res) => {
+/*export const showLoginPage = (req, res) => {
   res.render('loginPage');
 };
  */
