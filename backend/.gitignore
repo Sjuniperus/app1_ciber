@@ -1,0 +1,6 @@
+# Archivos generados por Node.js
+../node_modules/
+
+# Archivos generados por npm
+../npm-debug.log
+../yarn-error.log
