@@ -38,6 +38,6 @@ const UserSchema = new mongoose.Schema ({
 })
 
 //const que interactua con la base de datos
-const User = mongoose.model('Users', UserSchema); 
+const User = mongoose.model('users', UserSchema); 
 
 export default User;

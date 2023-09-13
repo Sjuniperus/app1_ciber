@@ -1,11 +1,12 @@
 import FormLock from "../model/FormModel.js";
+import { check, validationResult } from 'express-validator';
+
 
 //Crud (crear, leer, actulizar, borrar)
 
 //crear
 
 export const createForm = async (req, res) =>{
-    console.log (req.body)
     const {Email, Name, Subject, Message} = req.body
     if (!Email || !Name || !Subject || !Message ){
         return res.status(400).json ({message: "Todos los campos son requeridos."})

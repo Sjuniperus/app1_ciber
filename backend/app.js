@@ -18,8 +18,8 @@ app.use(cors());
   
 app.use('/form', FormRouter);
 app.use('/login', AuthRoutes);
-app.use('/create', UserRoutes);
 app.use('/user', UserRoutes);
+
 
 
 

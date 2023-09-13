@@ -1,5 +1,6 @@
 import User from '../model/UserModel.js';
 import bcryptjs from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -33,6 +34,7 @@ export const registerUser = async (req, res) => {
 
     return res.status(201).json({ message: 'Usuario registrado con éxito.', token });
   } catch (error) {
+    console.log(error);
     return res.status(500).json({ message: 'Error en el registro.' });
   }
 };

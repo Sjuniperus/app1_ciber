@@ -1,6 +1,7 @@
 import Auth from "../model/AuthModel.js";
 /* import { render } from 'loginPage';*/
 import bcryptjs from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 dotenv.config();
 
