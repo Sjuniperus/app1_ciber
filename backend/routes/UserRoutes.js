@@ -7,4 +7,5 @@ UserRoutes.post('/create', registerUser);
 
 UserRoutes.get('/profile', getUsersProfile);
 
+
 export default UserRoutes;
