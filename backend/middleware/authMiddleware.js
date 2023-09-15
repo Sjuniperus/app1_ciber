@@ -10,7 +10,7 @@ export const authenticate = (req, res, next) => {
     // Verificar y decodificar el token
     try {
     const decoded = jwt.verify(token, 'clave secreta'); 
-
+       
     // Adjunta info del usuario
     req.user = decoded.user;
     req.user.isAdmin = decoded.user.isAdmin;

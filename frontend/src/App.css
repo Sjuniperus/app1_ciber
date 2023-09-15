@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --primaryColor:hsl(135, 40%, 41%);
+  --hoverColor: #8c1c70;
+  --paleColor:hsl(135, 64%, 70%);
+  --inputColor: #57b26d;
+  --biggestFont: 2.5rem;
+  --h1Font:1.5rem;
+  --h2Font: 1.25rem;
+  --h3Font: 1rem;
+  --normalFont: 0.9rem;
+  --smallFont: 0.8rem;
+  --smallestFont: 0.75rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 1.5;
+}
+
+html {
+  font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  font-size: var(--h2Font);
+  cursor: pointer;
+}
+
+.message {
+  display: none;
+}
+
+.showMessage {
+  display: block;
+  color: white;
+  background-color: red;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: grey;
+}
+
+.btn .icon {
+  margin: 0.5rem;
+}
+
+.btn:hover {
+  color: var(--primaryColor);
+  background-color: var(--paleColor);
+}/*# sourceMappingURL=App.css.map */

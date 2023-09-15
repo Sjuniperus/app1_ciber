@@ -26,7 +26,7 @@ export const login = async (req, res) => {
             return res.status(401).json({ message: 'Credenciales incorrectas' });
           }
         const jwtsecret = process.env.JWT_SECRET;
-        const token = jwt.sign({ userId: newUser._id}, jwtsecret|| 'defaultsecret', { expiresIn: '1h' });//defaultsecret es por si no encuentra el .env
+        const token = jwt.sign({ userId: newUser._id, role: newUser.Role}, jwtsecret|| 'defaultsecret', { expiresIn: '1h' });//defaultsecret es por si no encuentra el .env
 
         return res.status(200).json({ message: 'Usuario registrado con éxito.', token });
         
