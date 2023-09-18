@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { AuthContext } from "./AuthContext"
 
 export const AuthProvider = ({ children }) => {
@@ -11,7 +12,7 @@ export const AuthProvider = ({ children }) => {
     setIsAuthenticated(false);
   };
 
-  //vaor de datos compartidos
+  //valor del contexto que se exporta
   const contextValue = {
     isAuthenticated,
     login,

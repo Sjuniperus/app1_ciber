@@ -1,4 +1,6 @@
 import './App.css'
+import { AppRouter } from './AppRouter'
+import { AuthProvider } from './context/AuthProvider'
 
 
 
@@ -6,12 +8,9 @@ function App() {
 
   return (
    <div>
-    <RouterProvider/>
-
-    
-    <Dashbord/>
-    <Login/>
-    <Register/> 
+    <AuthProvider>
+      <AppRouter/>
+    </AuthProvider>
    </div>
   )
 }

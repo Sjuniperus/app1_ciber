@@ -1,18 +1,20 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { Navigation } from './component/Navigation'
-import { Login } from './pages/login/Login'
-import { Dashbord } from './pages/dashbord/Dashbord'
+import { Navigation } from './component/Navigation.jsx'
+import { Login } from './pages/Login.jsx'
+import { Dashbord } from './pages/Dashbord.jsx'
+import { Register } from './pages/Register.jsx'
 
 export const AppRouter = () => {
   return (
     <Routes>
         <Route path ='/' element= {<Navigation />}>
-            <Route path='/login' element= {<Login />}></Route>
+          
+            <Route index element= {<Login />}></Route>
             <Route path='/register' element= {<Register />}></Route>
             <Route path='/dashbord' element= {<Dashbord />}></Route>
 
-            <Route path='*' element= {<Navigate to='/' />}></Route>
+            <Route path='*' element= {<Navigate to='/login' />}></Route>
         </Route>
     </Routes>
   )}
