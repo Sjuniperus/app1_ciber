@@ -1,0 +1,93 @@
+.container{
+    background: url('../assets/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-size: cover;
+    height: 100%;  
+}
+
+.box{
+    width: 300px;
+    height: 100%;
+    background-color: hsl(201,100%,30.2%, 0.6);
+    border-radius: 5px;
+    position:relative;
+    width: 295px ;
+    height: 100%;
+    top: 2rem;
+    right: 1rem;
+    left: 25rem;
+}
+
+.right{
+    background-color: hsl(201,100%,30.2%, 0.6);
+    border-radius: 5px;
+    position:relative;
+    width: 295;
+    height: 500px;
+    top: 5rem;
+    right: 1rem;
+    left: 1rem;
+}
+body{
+    background: url('../assets/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-size: cover;
+    height: 100%;
+}
+@media screen and (min-width: 800px) {
+   
+    .left{
+        background-color: hwb(201 0% 40% / 0.7);
+        border-radius: 5px;
+        width: 320px ;
+        height: 280px;
+        margin-left: 24rem;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    h3 {
+        margin: 1rem 1rem 1rem 3rem;
+        color: wheat;
+    }
+
+    input[type=text], input[type=email], input[type=password] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 200px;
+        box-sizing: border-box;
+        margin-left: 3rem;
+        margin-right: 2rem;
+    }
+
+    label{
+        margin-left: 3rem;
+        color:wheat;
+    }
+    
+    .btn {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 0.8rem 0.5rem;
+        margin: 2rem 3rem 1rem 3rem;
+        color: grey;
+      }
+
+      .btn .icon {
+        margin: 0.5rem;
+      }
+      
+      .btn:hover {
+        color: white;
+        background-color: hwb(201 2% 65% / 0.9);
+      }
+}
