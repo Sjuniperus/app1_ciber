@@ -3,9 +3,9 @@ import { createForm, deleteForm, updateForm, getForms, getFormid } from '../cont
 
 const FormRouter = express.Router();
 
-FormRouter.get('/', getForms)
+FormRouter.get('/form', getForms)
 FormRouter.get('/:id',getFormid )
-FormRouter.post ('/', createForm )
+FormRouter.post ('/create-form', createForm )
 FormRouter.put ('/:id', updateForm )
 FormRouter.delete ('/:id', deleteForm)
 
