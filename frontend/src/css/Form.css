@@ -3,12 +3,12 @@
     background-repeat: no-repeat;
     background-position: center, center;
     background-size: cover;
-    height: 100%;  
+    height: 100vh;  
 }
 
 .box{
     width: 300px;
-    height: 100%;
+    height: 20rem;
     background-color: hsl(201,100%,30.2%, 0.6);
     border-radius: 5px;
     position:relative;
@@ -57,9 +57,11 @@ color: wheat;
 
 input[type=text], input[type=email], input[type=password], textarea{
 padding: 5px;
-border: 1px solid #ccc;
+border: 1px solid #959191;
 border-radius: 3px;
 width: 200px;
+color:#959191;
+background-color: #4d4b4b;
 box-sizing: border-box;
 margin-left: 3rem;
 margin-right: 2rem;
@@ -81,7 +83,7 @@ cursor: pointer;
 border-radius: 8px;
 padding: 0.8rem 0.5rem;
 margin: 2rem 3rem 1rem 3rem;
-color: grey;
+color: rgb(81, 79, 79);
 }
 
 .btn .icon {
@@ -90,14 +92,14 @@ margin: 0.5rem;
 
 .btn:hover {
 color: white;
-background-color: hwb(201 2% 65% / 0.9);
+background-color: hwb(202 1% 80% / 0.887);
 }
 
 
 /* ---------------------- Contact form ---------------- */
 .contact{
     width: 500px;
-    height: 100%;
+    height: 38rem;
     background-color: hsl(201,100%,30.2%, 0.6);
     border-radius: 5px;
     position:relative;

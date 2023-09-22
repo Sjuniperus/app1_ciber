@@ -16,7 +16,7 @@ export const ContactForm = () => {
     console.log(`handleChange called with name: ${name} and value: ${value}`);
     setFormData({
       ...formData,
-      [name] : name
+      [name] : value
     
     });
   };

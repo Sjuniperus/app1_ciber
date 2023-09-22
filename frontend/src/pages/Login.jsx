@@ -4,6 +4,7 @@ import '../css/Form.css';
 
 export const Login = () => {
   return (
+      <div className="container">
         <div className='box'>
           <form action="POST">
               <h3>Sign in or <a href="/register">Sign up</a></h3>
@@ -15,6 +16,7 @@ export const Login = () => {
               <button className='btn btnPosition'>Login</button> 
           </form>
         </div>
+      </div>
       
   )
 }
