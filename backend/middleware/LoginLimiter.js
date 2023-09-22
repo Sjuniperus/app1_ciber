@@ -15,7 +15,7 @@ const loginRateLimit = rateLimit({
 });
 
 // Define el middleware LoginLimiter que utiliza el límite de velocidad
-export const LoginLimiter = async (req, res, next) => {
+export const loginLimiter = async (req, res, next) => {
   try {
     // Obtén la dirección IP del cliente desde req.ip o req.connection.remoteAddress
     const clientIP = req.ip || req.connection.remoteAddress;

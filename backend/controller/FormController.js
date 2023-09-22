@@ -1,12 +1,12 @@
 import FormLock from "../model/FormModel.js";
 import { check, validationResult } from 'express-validator';
+import xss from 'xss';
 
 
 //Crud (crear, leer, actulizar, borrar)
  
 //crear
-const xss = require('xss');
-const filter = new xss.Filter();
+const filter = new xss.FilterXSS();
 
 export const createForm = async (req, res) =>{
 
