@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-position: center, center;
     background-size: cover;
-    height: 100vh;  
+    height: 100%;  
 }
 
 .box{
@@ -95,6 +95,17 @@ color: white;
 background-color: hwb(202 1% 80% / 0.887);
 }
 
+/* ---------------------- Register form ---------------- */
+.register{
+    width: 300px;
+    height: 33rem;
+    background-color: hsl(201,100%,30.2%, 0.6);
+    border-radius: 5px;
+    position:relative;
+    top: 2rem;
+    right: 1rem;
+    left: 25rem;
+}
 
 /* ---------------------- Contact form ---------------- */
 .contact{

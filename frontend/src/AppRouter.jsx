@@ -16,7 +16,7 @@ export const AppRouter = () => {
             <Route path='/form' element= {<ContactForm />}></Route>
             <Route path='/dashbord' element= {<Dashbord />}></Route>
 
-            <Route path='*' element= {<Navigate to='/login' />}></Route>
-        </Route>
+{/*             <Route path='*' element= {<Navigate to ='/login' />}></Route>
+ */}        </Route>
     </Routes>
   )}

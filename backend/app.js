@@ -21,10 +21,10 @@ app.use('/login', AuthRoutes);
 app.use('/user', UserRoutes);
 
 
+const port = process.env.PORT || 8000
 
-
-app.listen(8000, () => {
-    console.log('Servidor iniciado en el puerto 8000'); //puerto donde escucha la app
+app.listen(port, () => {
+    console.log("Servidor iniciado en el puerto ${port}"); //puerto donde escucha la app
 });
 
 

@@ -1,1 +1,1 @@
-export const conextion
+export const conection
