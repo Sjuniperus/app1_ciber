@@ -1,1 +1,3 @@
-export const conection
+import axios from 'axios';
+
+const globalURL = 'http://localhost:8000';

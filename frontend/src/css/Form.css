@@ -1,9 +1,7 @@
-.container{
+body{
     background: url('../assets/logo.svg');
     background-repeat: no-repeat;
-    background-position: center, center;
     background-size: cover;
-    height: 100%;  
 }
 
 .box{
@@ -27,13 +25,7 @@
     right: 1rem;
     left: 1rem;
 } */
-body{
-    background: url('../assets/logo.svg');
-    background-repeat: no-repeat;
-    background-position: center, center;
-    background-size: cover;
-    height: 100%;
-}
+
 
    
 /* .left{
